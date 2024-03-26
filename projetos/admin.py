@@ -1,3 +1,11 @@
 from django.contrib import admin
+from projetos import models
 
-# Register your models here.
+@admin.register(models.Projetos)
+class ProjetosAdmin(admin.ModelAdmin):
+    ...
+    
+    
+@admin.register(models.Categoria)
+class CategoriaAdmin(admin.ModelAdmin):
+    ...

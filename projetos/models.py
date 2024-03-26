@@ -12,9 +12,10 @@ class Categoria(models.Model):
         return self.name
 
 class Projetos(models.Model):
-    nome = models.CharField(max_length=255)
+    nome = models.CharField(max_length=255, blank=False)
     sigla = models.CharField(max_length=10, blank=True)
-    email_responsavel = models.EmailField(max_length=254)
+    numero = models.CharField(max_length=50, blank=False)
+    email_responsavel = models.EmailField(max_length=254, blank=False)
     data_cadastro = models.DateTimeField(default=timezone.now)
     descricao = models.TextField(blank=True)
     show = models.BooleanField(default=True)

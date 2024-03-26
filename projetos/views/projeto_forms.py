@@ -16,9 +16,9 @@ def create(request):
         }
         if form.is_valid():
             print('form salvo')
-            contact= form.save(commit=False)
-            contact.owner = request.user
-            contact.save()
+            projeto= form.save(commit=False)
+            projeto.criador = request.user
+            projeto.save()
             return redirect('projetos:projetos',)
         return render(
             request,

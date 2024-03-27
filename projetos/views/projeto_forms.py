@@ -6,6 +6,7 @@ from projetos.models import Projetos
 from projetos.forms import Projetoforms
 
 
+
 def create(request):
     form_action = reverse('projetos:projeto_forms')
     if request.method == 'POST':

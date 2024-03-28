@@ -16,6 +16,6 @@ def projetos(request):
     }
     return render(
         request,
-        'projetos/index.html',
+        'projetos/_index.html',
         context
         )

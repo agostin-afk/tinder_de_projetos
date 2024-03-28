@@ -54,6 +54,7 @@
     display: block;
     max-width: 100%;
   }
+
   .projeto_single_feed{
     display: grid;
     width: 70%;
@@ -67,7 +68,6 @@
       "foto descricao"
       "foto criacao";
   }
-  
   
   .projeto_single_feed .foto_projeto{
     grid-area: foto;
@@ -89,9 +89,10 @@
     text-align: left;
     margin-left: 5%;
     padding-left: 5%;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.2em;
-    color: #3d3d3d;
+    font-family: 'Arial', sans-serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #292929;
     line-height: 1.6;
   }
   
@@ -103,7 +104,6 @@
     color: #848383;
   }
   
-
   .item{
     border: 1px solid #00f4bf;
     text-align: center;

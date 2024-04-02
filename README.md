@@ -6,7 +6,7 @@ _Em desenvolvimento_
 Um projeto idealizado no primeiro semestre no curso de Engenharia de Computação.
 
 
-A criação de uma plataforma para divulgação de projetos dentro da UFC(universidade federal do ceará), suprimindo a necessidade do docente de monitorar as redes sociais de diversos laboratórios e projetos correndo o risco de deixar uma oportunidade passa. 
+A criação de uma plataforma para divulgação de projetos dentro da UFC(universidade federal do ceará), suprimindo a necessidade do docente de monitorar as redes sociais de diversos laboratórios e projetos correndo o risco de deixar uma oportunidade passar. 
 
 
 

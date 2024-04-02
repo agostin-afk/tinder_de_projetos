@@ -15,6 +15,22 @@ class Projetoforms(forms.ModelForm):
         ),
         required= False,
     )
+    imagem_1 = forms.ImageField(
+        widget= forms.FileInput(
+            attrs= {
+                'accept': 'iamge/*',
+            }
+        ),
+        required= False,
+    )
+    imagem_2 = forms.ImageField(
+        widget= forms.FileInput(
+            attrs= {
+                'accept': 'iamge/*',
+            }
+        ),
+        required= False,
+    )
     nome = forms.CharField(
         widget= forms.TextInput(
             attrs= {
@@ -38,6 +54,10 @@ class Projetoforms(forms.ModelForm):
             'descricao',
             'logo',
             'categoria',
+            'texto_1',
+            'texto_2',
+            'imagem_1',
+            'imagem_2',
                 )
     def clean(self):
         #cleaned_data = self.cleaned_data

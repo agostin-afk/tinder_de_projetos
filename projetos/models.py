@@ -22,6 +22,10 @@ class Projetos(models.Model):
     logo = models.ImageField(blank=True,upload_to='picture/%Y/%m')
     categoria = models.ForeignKey(Categoria, on_delete=models.SET_NULL, null=True, blank=True)
     criador = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+    texto_1 = models.TextField(blank=True)
+    texto_2 = models.TextField(blank=True)
+    imagem_1 = models.ImageField(blank=True,upload_to='picture/%Y/%m')
+    imagem_2 = models.ImageField(blank=True,upload_to='picture/%Y/%m')
     
     class Meta():
         verbose_name = 'Projeto'

@@ -4,10 +4,14 @@
 {% for projeto in page_obj %}
       <div class="projeto_single_feed">
         <div class="foto_projeto">
-          <h1>{{ projeto.logo }}</h1>
+          {% if projeto.logo %}
+          <a href="{% url 'projetos:single_projeto' projeto.id %}"><img src="{{ projeto.logo.url }}"></a>
+          {% else %}
+          <a href="{% url 'projetos:single_projeto' projeto.id %}"><img src="/media/picture/2024/04/c_original_logo_icon.png"></a>
+          {% endif %}
         </div>
         <div class="item titulo_projeto">
-          <h1>{{projeto.nome}}</h1>
+          <h1><a href="{% url 'projetos:single_projeto' projeto.id %}">{{projeto.nome}}</a></h1>
         </div>
         <div class="item descricao_projeto">
           <h2>{{projeto.descricao}}</h2>

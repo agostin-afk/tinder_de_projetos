@@ -71,7 +71,6 @@
   
   .projeto_single_feed .foto_projeto{
     grid-area: foto;
-    background-color: blue;
     margin-left: 5%;
     height: 80%;
     position: relative;

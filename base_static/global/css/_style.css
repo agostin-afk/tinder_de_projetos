@@ -122,3 +122,19 @@
     grid-area: criacao;
   }
   
+  .single_projeto{
+    width: 75%;
+    margin-left: 10%;
+    background-color: red;
+  }
+  .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 45px;
+  }
+  
+  .lista{
+    list-style: none;
+  }

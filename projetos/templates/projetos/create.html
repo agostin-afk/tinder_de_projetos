@@ -12,6 +12,7 @@
     {% csrf_token %}
   <div class="form-content">
     {% for field in form %}
+      {{form.media}}
       <div class="form-group">
         <label for="{{field.id_for_label}}">{{field.label}}</label>
         {{field}}

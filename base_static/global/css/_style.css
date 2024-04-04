@@ -123,9 +123,11 @@
   }
   
   .single_projeto{
-    width: 75%;
+    width: 80%;
     margin-left: 10%;
+    margin-right: 5%;
     background-color: red;
+    word-wrap: break-word;
   }
   .header{
     display: flex;

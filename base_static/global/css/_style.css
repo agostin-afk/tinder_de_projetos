@@ -68,6 +68,9 @@
       "foto descricao"
       "foto criacao";
   }
+  .projeto_single_feed h1{
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+  }
   
   .projeto_single_feed .foto_projeto{
     grid-area: foto;

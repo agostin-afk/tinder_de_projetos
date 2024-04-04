@@ -37,4 +37,32 @@ def create(request):
         'projetos/create.html',
         context
         )
- 
+
+
+def update(request, projeto_id):
+    projeto = get_object_or_404(Projetos, pk= projeto_id, show=True)
+    form_action = reverse('projetos:update', args=(projeto_id,))
+    
+    if request.method == 'POST':
+        forms = Projetoforms(request.POST, request.FILES, instance=projeto)
+        context={
+            'form': forms,
+            'form_action': form_action, 
+        }
+        if forms.is_valid():
+            projeto= forms.save()
+            return redirect('projetos:update', projeto_id=projeto.pk)
+        return render(
+            request,
+            'projetos/create.html',
+            context
+            )
+    context={
+        'form': Projetoforms(instance=projeto),
+        'form_action': form_action,
+    }
+    return render(
+        request,
+        'projetos/create.html',
+        context
+    )

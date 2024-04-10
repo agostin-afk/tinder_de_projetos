@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
-from projetos.forms import RegisterForm
-from projetos.forms import RegisterForm, RegisterUpdateUserForm
+from usuarios.forms import RegisterForm, RegisterUpdateForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
@@ -46,9 +45,9 @@ def logout(request):
     return redirect('usuarios:login')
 
 def update_user(request):
-    form = RegisterUpdateUserForm(instance= request.user)
+    form = RegisterUpdateForm(instance= request.user)
     if request.method == 'POST':
-        form = RegisterUpdateUserForm(data= request.POST, instance= request.user)
+        form = RegisterUpdateForm(data= request.POST, instance= request.user)
         if form.is_valid():
             form.save()
             return redirect('usuarios:login')

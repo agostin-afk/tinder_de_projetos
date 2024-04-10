@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from projetos.forms import RegisterForm # , RegisterUpdateForm
+from projetos.forms import RegisterForm
+from projetos.forms import RegisterForm, RegisterUpdateUserForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
@@ -34,7 +35,7 @@ def register(request):
             return redirect('contact:index')
     return render(
         request,
-        'contact/register.html',
+        'usuarios/register.html',
         {
             'form': form,
         },
@@ -45,4 +46,16 @@ def logout(request):
     return redirect('usuarios:login')
 
 def update_user(request):
-    ...
+    form = RegisterUpdateUserForm(instance= request.user)
+    if request.method == 'POST':
+        form = RegisterUpdateUserForm(data= request.POST, instance= request.user)
+        if form.is_valid():
+            form.save()
+            return redirect('usuarios:login')
+    return render(
+        request,
+        'usuarios/user_update.html',
+        {
+            'form': form
+        }
+    )

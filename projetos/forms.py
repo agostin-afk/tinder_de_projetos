@@ -48,6 +48,25 @@ class Projetoforms(forms.ModelForm):
             )
         return super().clean()
 
+class RegisterUpdateUserForm(forms.ModelForm):
+    
+    nome = forms.CharField(
+        required= True,
+        min_length= 3,
+    )
+    
+    class Meta:
+            model = Projetos
+            fields = (
+                'nome',
+                'sigla',
+                'numero',
+                'email_responsavel',
+                'descricao',
+                'logo',
+                'categoria',
+                'corpo',
+                    )
 class RegisterForm(UserCreationForm):
     first_name = forms.CharField(
         required= True,

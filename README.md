@@ -41,7 +41,7 @@ python manage.py runserver
     
 ## Bibliotecas
 
-Com o ambiente virtual ativado, instale as seguintes dependências antes de rodar os comandos migrate:
+Com o ambiente virtual ativado, instale as seguintes dependências antes de rodar os comandos migrate:<br></br>
 _caso o comando ```bash pip install -r requirements.txt``` não funcione_
 ```bash
 asgiref==3.8.1

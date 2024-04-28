@@ -29,16 +29,20 @@ _atualmente estou usando apenas Django, mas futuramente implementarei outras fer
 Rode esses comandos no terminal da raiz do projeto:
 
 ```bash
-.\NomeDoSeuAmbienteVirtual\Scripts\Activate.ps1
+python -m venv nome_ambienteVirtual
+nome_ambienteVirtual/Scripts/Activate.ps1
+pip install -r requirements.txt
+python manage.py collectstatic
 python manage.py makemigrations
 python manage.py migrate
+python manage.py ceatesuperuser
 python manage.py runserver
 ```
     
 ## Bibliotecas
 
 Com o ambiente virtual ativado, instale as seguintes dependências antes de rodar os comandos migrate:
-
+_caso o comando ```bash pip install -r requirements.txt``` não funcione_
 ```bash
 asgiref==3.8.1
 Django==5.0.3

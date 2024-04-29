@@ -1,11 +1,17 @@
-
+import os
+from dotenv import load_dotenv
 from pathlib import Path
 
+#dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'dotenv_files', '.env')
+
 BASE_DIR = Path(__file__).resolve().parent.parent
+DOTENV_FILE = BASE_DIR / "dotenv_files" / ".env"
 
+load_dotenv(DOTENV_FILE)
 
-SECRET_KEY = 'django-insecure-i(7c_&k=_2!^(gr*ha2$7=l9xyw^06cbvvflp4cao35@d)a$7^'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
+print(os.getenv('SECRET_KEY'))
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -105,3 +111,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+try:
+    from tinder.local_settings import *
+except ImportError:
+    ...

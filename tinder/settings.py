@@ -11,7 +11,6 @@ load_dotenv(DOTENV_FILE)
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-print(os.getenv('SECRET_KEY'))
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -25,6 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'projetos',
     'usuarios',
     'ckeditor',

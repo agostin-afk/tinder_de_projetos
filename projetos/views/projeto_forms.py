@@ -66,3 +66,16 @@ def update(request, projeto_id):
         'projetos/create.html',
         context
     )
+def delete(request, projeto_id):
+    projeto = get_object_or_404(Projetos, pk=projeto_id, show=True, criador=request.user)
+
+    if request.method == 'POST' and request.POST.get('confirmation') == 'yes':
+        projeto.delete()
+        return redirect('projetos:projetos')
+
+
+    context = {
+        'projeto': projeto,
+        'confirmation': 'no'
+    }
+    return render(request, 'projetos/projeto.html', context)

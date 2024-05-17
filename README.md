@@ -1,4 +1,4 @@
-# Tinder de Produtos
+# Tinder de Projetos
 
 _Em desenvolvimento_
 

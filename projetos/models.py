@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
+from utils.slug_settings import create_slug
 
 class Categoria(models.Model):
     name = models.CharField(max_length=50)
@@ -12,6 +13,10 @@ class Categoria(models.Model):
         return self.name
 
 class Projetos(models.Model):
+    class Meta():
+        verbose_name = 'Projeto'
+        verbose_name_plural = 'Projetos'
+        
     nome = models.CharField(max_length=255, blank=False)
     sigla = models.CharField(max_length=10, blank=True)
     numero = models.CharField(max_length=50, blank=False)
@@ -23,10 +28,15 @@ class Projetos(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.SET_NULL, null=True, blank=True)
     criador = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
     corpo = RichTextField(blank=True, null=True)
-    
-    class Meta():
-        verbose_name = 'Projeto'
-        verbose_name_plural = 'Projetos'
+    slug = models.SlugField(
+        unique=True,
+        blank=True,
+        null=True,
+        default='',
+    )
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = create_slug(self.nome)
     def __str__(self) -> str:
         if self.sigla:
             return self.sigla

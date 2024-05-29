@@ -45,10 +45,18 @@ Com o ambiente virtual ativado, instale as seguintes dependências antes de roda
 _caso o comando ```bash pip install -r requirements.txt``` não funcione_
 ```bash
 asgiref==3.8.1
-Django==5.0.3
-pillow==10.2.0
-sqlparse==0.4.4
-tzdata==2024.1
+Django>=5.0.6
+sqlparse>=0.5.0
+tzdata>=2024.1
+psycopg2-binary>=2.9.6
+psycopg2>=2.9.9
+Pillow>=9.5.0
+django-summernote>=0.8.20.0
+python-dotenv>=1.0.1
+django-axes>=6.4.0
+bleach==6.1.0
+six==1.16.0
+webencodings==0.5.1
 ```
 
 

@@ -8,7 +8,7 @@
 
 
 
->A criação de uma plataforma para divulgação de projetos. suprimindo a necessidade de monitorar as redes sociais, correndo o risco de deixar uma oportunidade passar.
+>A criação de uma plataforma para divulgação de projetos. Suprimindo a necessidade de monitorar as redes sociais, correndo o risco de deixar uma oportunidade passar.
 
 ### Ajustes e melhorias
 
@@ -40,7 +40,7 @@ Windows, Linux e macOS:
 
 ## ☕ Usando Tinder de Projetos
 
-Para usar <nome_do_projeto>, siga estas etapas:
+Para usar Tinder de Projetos, siga estas etapas:
 - Crie um super-usuario
 ```
 <python manage.py createsuperuser>

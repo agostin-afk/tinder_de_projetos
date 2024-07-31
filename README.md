@@ -1,62 +1,55 @@
 # Tinder de Projetos
 
-_Em desenvolvimento_
-
-
-Um projeto idealizado no primeiro semestre no curso de Engenharia de Computação.
-
-
-A criação de uma plataforma para divulgação de projetos dentro da UFC(universidade federal do ceará), suprimindo a necessidade do docente de monitorar as redes sociais de diversos laboratórios e projetos correndo o risco de deixar uma oportunidade passar. 
-
-
-
-_atualmente estou usando apenas Django, mas futuramente implementarei outras ferramentas como o React_
+![GitHub repo size](https://img.shields.io/github/repo-size/agostin-afk/tinder_de_projetos?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/agostin-afk/tinder_de_projetos?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/agostin-afk/tinder_de_projetos?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/agostin-afk/tinder_de_projetos?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/agostin-afk/tinder_de_projetos?style=for-the-badge)
 
 
 
-## Funcionalidades
+>A criação de uma plataforma para divulgação de projetos. suprimindo a necessidade de monitorar as redes sociais, correndo o risco de deixar uma oportunidade passar.
 
-- Cadastrar projetos
+### Ajustes e melhorias
 
-- feed com os projetos cadastrados, com as respectivas informações
+O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- Envio de Emails dos interessados para os criadores dos projetos
+- [ ] Cadastrar projetos
+- [ ] Feed com os projetos cadastrados
+- [ ] Envio de Emails
+- [ ] Alert para usuarios
 
-- aviso do início de PS(processos seletivos) de projetos do interesse do usuário
+## 💻 Pré-requisitos
 
-## Instalação
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-Rode esses comandos no terminal da raiz do projeto:
+- `<Python3>`
+- `<Windows / Linux / Mac>`
 
-```bash
-python -m venv nome_ambienteVirtual
-nome_ambienteVirtual/Scripts/Activate.ps1
-pip install -r requirements.txt
-python manage.py collectstatic
-python manage.py makemigrations
-python manage.py migrate
-python manage.py ceatesuperuser
-python manage.py runserver
+
+## 🚀 Instalando Tinder de Projetos
+
+Para instalar o Tinder de Projetos, siga estas etapas:
+
+
+Windows, Linux e macOS:
+
 ```
-    
-## Bibliotecas
-
-Com o ambiente virtual ativado, instale as seguintes dependências antes de rodar os comandos migrate:<br></br>
-_caso o comando ```bash pip install -r requirements.txt``` não funcione_
-```bash
-asgiref==3.8.1
-Django>=5.0.6
-sqlparse>=0.5.0
-tzdata>=2024.1
-psycopg2-binary>=2.9.6
-psycopg2>=2.9.9
-Pillow>=9.5.0
-django-summernote>=0.8.20.0
-python-dotenv>=1.0.1
-django-axes>=6.4.0
-bleach==6.1.0
-six==1.16.0
-webencodings==0.5.1
+<pip install -r requirements.txt>
 ```
 
+## ☕ Usando Tinder de Projetos
 
+Para usar <nome_do_projeto>, siga estas etapas:
+- Crie um super-usuario
+```
+<python manage.py createsuperuser>
+```
+- Faça as migrações
+``` 
+<python manage.py makemigrations && python manage.py migrate>
+```
+- Inicie o servidor
+``` 
+<python manage.py runserver>
+```
